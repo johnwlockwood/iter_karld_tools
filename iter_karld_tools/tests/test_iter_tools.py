@@ -4,9 +4,9 @@ from operator import methodcaller
 import unittest
 import types
 
-from karld.iter_utils import i_batch
-from karld.iter_utils import yield_getter_of
-from karld.iter_utils import yield_nth_of
+from iter_karld_tools import i_batch
+from iter_karld_tools import yield_getter_of
+from iter_karld_tools import yield_nth_of
 
 
 class TestIBatch(unittest.TestCase):
