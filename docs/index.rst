@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to karld's documentation!
+Welcome to iter_karld_tools's documentation!
 =================================
 
 Contents:
@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
 
    getting-started
-   source/karld
+   source/iter_karld_tools
    source/example
 
 Indices and tables
