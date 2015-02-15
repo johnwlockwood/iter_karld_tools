@@ -8,7 +8,7 @@ try:
     packages = find_packages()
 except ImportError:
     from distutils.core import setup
-    packages = ['karld', 'karld.tests', 'karld.record_reader']
+    packages = ['iter_karld_tools', 'iter_karld_tools.tests']
 
 from pip.req import parse_requirements
 
@@ -30,8 +30,8 @@ def read(fname):
 def get_version():
     import imp
 
-    with open('karld/_meta.py', 'rb') as fp:
-        mod = imp.load_source('_meta', 'karld', fp)
+    with open('iter_karld_tools/_meta.py', 'rb') as fp:
+        mod = imp.load_source('_meta', 'iter_karld_tools', fp)
 
     return mod.version
 
@@ -56,22 +56,21 @@ except:
     license_info = 'APACHE 2.0'
 
 setup_args = dict(
-    name="karld",
+    name="iter_karld_tools",
     version=get_version(),
     author="John W Lockwood IV",
     author_email="john@tackletronics.com",
-    description=("Doing some data things "
-                 "in a memory efficient manner"),
+    description="More tools for iterators",
     license=license_info,
     keywords="data",
-    url="https://github.com/johnwlockwood/karl_data",
-    package_dir={'karld': 'karld'},
+    url="https://github.com/johnwlockwood/iter_karld_tools",
+    package_dir={'iter_karld_tools': 'iter_karld_tools'},
     packages=packages,
     install_requires=get_install_requires(),
     tests_require=get_test_requires(),
     long_description=read('README.rst'),
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'Natural Language :: English',

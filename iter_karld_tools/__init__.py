@@ -1,3 +1,8 @@
+from iter_karld_tools import _meta
+
+__version__ = _meta.version
+__version_info__ = _meta.version_info
+
 from functools import partial
 
 try:
