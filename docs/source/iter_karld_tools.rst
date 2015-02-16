@@ -4,7 +4,7 @@ iter_karld_tools Package
 :mod:`iter_karld_tools` Package
 --------------------
 
-.. automodule:: karld.__init__
+.. automodule:: iter_karld_tools
     :members:
     :undoc-members:
     :show-inheritance:
