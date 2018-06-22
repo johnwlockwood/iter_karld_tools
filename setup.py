@@ -10,8 +10,6 @@ except ImportError:
     from distutils.core import setup
     packages = ['iter_karld_tools', 'iter_karld_tools.tests']
 
-from pip.req import parse_requirements
-
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
@@ -37,12 +35,15 @@ def get_version():
 
 
 def get_requirements(filename):
-    try:
-        reqs = list(parse_requirements(filename))
-    except TypeError:
-        reqs = list(parse_requirements(filename, session=uuid.uuid1()))
+    """
+    Get requirements from a file and
+    convert to a list of strings.
 
-    return [str(r.req) for r in reqs]
+    :param filename:
+    :return:
+    """
+    with open(filename) as f:
+        return list(f)
 
 
 def get_test_requires():
